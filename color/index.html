@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+      .form{
+        position: absolute;
+        left: 36%;
+        margin-top: 20%;
+      }
+      input#inp
+      {
+        position: absolute;
+        width: 50vh;
+        border: 0;
+        padding: 20px;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+    </style>
+</head>
+<body id="b">
+    
+
+  <form action="" class="form">
+      <input type="text" placeholder="value of color by HEX " value='' id="inp">
+  </form>
+
+    
+
+  <script>
+
+  setInterval(() => {
+    let color_number = [1,2,3,4,5,6,7,8,9]
+    let color_hexa   = ['A','B','C','D','E','F']
+
+    let color_hexa2   = ['A','B','C','D','E','F']
+    let len = color_hexa.length
+
+    let get_random = Math.floor(Math.random() * 6)
+    let get_random2 = Math.floor(Math.random() * 9)
+
+    let hex = "#" + color_number[get_random]
+    let color_hex = "#" + color_hexa[get_random] + color_hexa[get_random] + color_number[get_random] +  color_number[get_random] + color_hexa2[get_random2] + color_hexa[get_random]
+
+    let b = document.getElementById("b")
+    b.style.background = color_hex
+
+    console.log(color_hex)
+
+    let inp = document.querySelector("#inp").value = color_hex 
+  },1000)
+
+  </script>
+</body>
+</html>
